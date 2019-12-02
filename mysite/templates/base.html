@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li style="float:right"><a href="{% url 'home' %}">Online Sudoku</a></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
