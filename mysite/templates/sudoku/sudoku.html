@@ -2,125 +2,142 @@
 
 {% block content %}
     <h2>Sudoku</h2>
-    <form>
-        <div name="Box-1">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.0}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.2}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.4}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.6}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.8}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.10}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.12}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.14}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.16}}>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ user.username }}
+        <div name="Row-1" style="overflow: hidden;">
+            <div name="Box-1" style="float: left; margin: 4px;">
+                {{ form.box_1_value_1 }}
+                {{ form.box_1_value_2 }}
+                {{ form.box_1_value_3 }}
+                <br>
+                {{ form.box_1_value_4 }}
+                {{ form.box_1_value_5 }}
+                {{ form.box_1_value_6 }}
+                <br>
+                {{ form.box_1_value_7 }}
+                {{ form.box_1_value_8 }}
+                {{ form.box_1_value_9 }}
+                <br>
+            </div>
+            <div name="Box-2" style="float: left; margin: 4px;">
+                {{ form.box_2_value_1 }}
+                {{ form.box_2_value_2 }}
+                {{ form.box_2_value_3 }}
+                <br>
+                {{ form.box_2_value_4 }}
+                {{ form.box_2_value_5 }}
+                {{ form.box_2_value_6 }}
+                <br>
+                {{ form.box_2_value_7 }}
+                {{ form.box_2_value_8 }}
+                {{ form.box_2_value_9 }}
+                <br>
+            </div>
+            <div name="Box-3" style="float: left; margin: 4px;">
+                {{ form.box_3_value_1 }}
+                {{ form.box_3_value_2 }}
+                {{ form.box_3_value_3 }}
+                <br>
+                {{ form.box_3_value_4 }}
+                {{ form.box_3_value_5 }}
+                {{ form.box_3_value_6 }}
+                <br>
+                {{ form.box_3_value_7 }}
+                {{ form.box_3_value_8 }}
+                {{ form.box_3_value_9 }}
+                <br>
+            </div>
         </div>
-        <div name="Box-2">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.18}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.20}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.22}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.24}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.26}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.28}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.30}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.32}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.34}}>
+        <div name="Row-2" style="overflow: hidden;">
+            <div name="Box-4" style="float: left; margin: 4px;">
+                {{ form.box_4_value_1 }}
+                {{ form.box_4_value_2 }}
+                {{ form.box_4_value_3 }}
+                <br>
+                {{ form.box_4_value_4 }}
+                {{ form.box_4_value_5 }}
+                {{ form.box_4_value_6 }}
+                <br>
+                {{ form.box_4_value_7 }}
+                {{ form.box_4_value_8 }}
+                {{ form.box_4_value_9 }}
+                <br>
+            </div>
+            <div name="Box-5" style="float: left; margin: 4px;">
+                {{ form.box_5_value_1 }}
+                {{ form.box_5_value_2 }}
+                {{ form.box_5_value_3 }}
+                <br>
+                {{ form.box_5_value_4 }}
+                {{ form.box_5_value_5 }}
+                {{ form.box_5_value_6 }}
+                <br>
+                {{ form.box_5_value_7 }}
+                {{ form.box_5_value_8 }}
+                {{ form.box_5_value_9 }}
+                <br>
+            </div>
+            <div name="Box-6" style="float: left; margin: 4px;">
+                {{ form.box_6_value_1 }}
+                {{ form.box_6_value_2 }}
+                {{ form.box_6_value_3 }}
+                <br>
+                {{ form.box_6_value_4 }}
+                {{ form.box_6_value_5 }}
+                {{ form.box_6_value_6 }}
+                <br>
+                {{ form.box_6_value_7 }}
+                {{ form.box_6_value_8 }}
+                {{ form.box_6_value_9 }}
+                <br>
+            </div>
         </div>
-        <div name="Box-3">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.36}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.38}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.40}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.42}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.44}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.46}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.48}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.50}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.52}}>
+        <div name="Row-3" style="overflow: hidden;">
+            <div name="Box-7" style="float: left; margin: 4px;">
+                {{ form.box_7_value_1 }}
+                {{ form.box_7_value_2 }}
+                {{ form.box_7_value_3 }}
+                <br>
+                {{ form.box_7_value_4 }}
+                {{ form.box_7_value_5 }}
+                {{ form.box_7_value_6 }}
+                <br>
+                {{ form.box_7_value_7 }}
+                {{ form.box_7_value_8 }}
+                {{ form.box_7_value_9 }}
+                <br>
+            </div>
+            <div name="Box-8" style="float: left; margin: 4px;">
+                {{ form.box_8_value_1 }}
+                {{ form.box_8_value_2 }}
+                {{ form.box_8_value_3 }}
+                <br>
+                {{ form.box_8_value_4 }}
+                {{ form.box_8_value_5 }}
+                {{ form.box_8_value_6 }}
+                <br>
+                {{ form.box_8_value_7 }}
+                {{ form.box_8_value_8 }}
+                {{ form.box_8_value_9 }}
+                <br>
+            </div>
+            <div name="Box-9" style="float: left; margin: 4px;">
+                {{ form.box_9_value_1 }}
+                {{ form.box_9_value_2 }}
+                {{ form.box_9_value_3 }}
+                <br>
+                {{ form.box_9_value_4 }}
+                {{ form.box_9_value_5 }}
+                {{ form.box_9_value_6 }}
+                <br>
+                {{ form.box_9_value_7 }}
+                {{ form.box_9_value_8 }}
+                {{ form.box_9_value_9 }}
+                <br>
+            </div>
         </div>
-        <div name="Box-4">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.54}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.56}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.58}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.60}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.62}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.64}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.66}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.68}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.70}}>
-        </div>
-        <div name="Box-5">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.72}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.74}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.76}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.78}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.80}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.82}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.84}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.86}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.88}}>
-        </div>
-        <div name="Box-6">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.90}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.92}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.94}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.96}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.98}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.100}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.102}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.104}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.106}}>
-        </div>
-        <div name="Box-7">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.108}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.110}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.112}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.114}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.116}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.118}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.120}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.122}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.124}}>
-        </div>
-        <div name="Box-8">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.126}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.128}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.130}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.132}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.134}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.136}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.138}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.140}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.142}}>
-        </div>
-        <div name="Box-9">
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.144}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.146}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.148}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.150}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.152}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.154}}>
-            <br>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.156}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.158}}>
-            <input type="number" name="value" min="1" max ="9" value={{Puzzle.int_list.160}}>
-        </div>
-        <br>
         <button type="submit">Submit</button>
     </form>
 {% endblock %}
